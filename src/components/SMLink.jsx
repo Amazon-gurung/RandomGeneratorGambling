@@ -115,13 +115,13 @@ const SMLink = () => {
         return (
           <div
             key={SMindex}
-            className="flex flex-row items-center gap-2 w-60 p-3"
+            className="flex flex-row items-center gap-2 w-70 p-3 border-2 rounded-2xl"
           >
             <div>{items.tags}</div>
             <ul className="flex flex-col gap-1">
               {items.link.map((itemLink, Linkindex) => {
                 return (
-                  <li key={Linkindex}>
+                  <li key={Linkindex} className="list-disc ml-10 text-lg">
                     <a href={itemLink.url} target="_blink">
                       {itemLink.userName}
                     </a>
