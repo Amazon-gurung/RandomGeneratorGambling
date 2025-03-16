@@ -1,11 +1,9 @@
-import { format } from "date-fns";
-
 export function generateGameResult() {
   const now = new Date();
 
-  const currentDate = format(now, "yyyyMMdd");
+  const currentDate = now.toISOString().slice(0, 10).replace(/-/g, "");
 
-  const totalMinutes = now.getHours() * 60 + now.getMinutes() + 1;
+  const totalMinutes = now.getUTCHours() * 60 + now.getUTCMinutes() + 1;
   const formattedMinutes = String(totalMinutes).padStart(4, "0");
 
   const autoPeriod = `${currentDate}10001${formattedMinutes}`;
