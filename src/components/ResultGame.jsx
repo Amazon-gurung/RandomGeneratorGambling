@@ -1,23 +1,26 @@
 import { useEffect, useState } from "react";
+import { generateGameResult } from "../RandomGenerator";
 
 const ResultGame = () => {
-  const [data, setData] = useState({});
+  const [data, setData] = useState(generateGameResult());
   const [remainingTime, setRemainingTime] = useState(0);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:6789");
+    const interval = setInterval(() => {
+      const updateRemainingTime = () => {
+        const now = new Date();
+        const secondsRemaining = 60 - now.getSeconds();
+        setRemainingTime(secondsRemaining);
 
-    ws.onmessage = (event) => {
-      const parsedData = JSON.parse(event.data);
-      setData(parsedData);
-      setRemainingTime(parsedData.remaining_time);
-    };
+        if (secondsRemaining === 60) {
+          setData(generateGameResult());
+        }
+      };
 
-    ws.onclose = () => {
-      console.log("WebSocket closed");
-    };
+      updateRemainingTime();
+    }, 1000);
 
-    return () => ws.close();
+    return () => clearInterval(interval);
   }, []);
 
   return (
