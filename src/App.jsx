@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-      {showDialog ? (
+      {showDialog && (
         <div className="flex justify-center items-center w-screen h-screen">
           <dialog
             ref={dialogRef}
@@ -40,7 +40,8 @@ function App() {
             </button>
           </dialog>
         </div>
-      ) : (
+      )}
+      {!showDialog && (
         <section className="flex flex-col justify-center items-center">
           <h1 className="flex justify-center items-center text-7xl w-full h-25 font-[yellowtail]">
             3ayank

@@ -3,21 +3,20 @@ import { generateGameResult } from "../RandomGenerator";
 
 const ResultGame = () => {
   const [data, setData] = useState(generateGameResult());
-  const [remainingTime, setRemainingTime] = useState(0);
+  const [remainingTime, setRemainingTime] = useState(60);
 
   useEffect(() => {
+    let lastUpdatedMinute = new Date().getUTCMinutes();
+
     const interval = setInterval(() => {
-      const updateRemainingTime = () => {
-        const now = new Date();
-        const secondsRemaining = 60 - now.getSeconds();
-        setRemainingTime(secondsRemaining);
+      const now = new Date();
+      const secondsRemaining = 60 - now.getSeconds();
+      setRemainingTime(secondsRemaining);
 
-        if (secondsRemaining === 60) {
-          setData(generateGameResult());
-        }
-      };
-
-      updateRemainingTime();
+      if (now.getUTCMinutes() !== lastUpdatedMinute) {
+        setData(generateGameResult());
+        lastUpdatedMinute = now.getUTCMinutes();
+      }
     }, 1000);
 
     return () => clearInterval(interval);
@@ -37,12 +36,12 @@ const ResultGame = () => {
         {data.number} {data.result}
         <div
           className={`w-15 h-15 ${
-            data.color === "green" ? "bg-green-600" : "bg-red-600"
+            data.color === "Green" ? "bg-green-600" : "bg-red-600"
           } rounded-full`}
         ></div>
       </h1>
       <h3 className="flex flex-col items-center text-2xl mt-10">
-        Time remaining... <div>{remainingTime} sec</div>
+        Time remaining <div>{remainingTime} sec</div>
       </h3>
     </section>
   );

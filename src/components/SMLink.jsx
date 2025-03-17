@@ -108,22 +108,27 @@ const smItem = [
 const SMLink = () => {
   return (
     <div
-      className="flex flex-col flex-wrap gap-2 justify-center items-center sm:w-full sm:h-80 
+      className="flex flex-col flex-wrap gap-5 justify-center items-center sm:w-full sm:h-80 
       md:w-full md:h-70 lg:w-8/10 lg:h-50 xl:w-8/10 xl:h-50 2xl:w-8/10 2xl:h-50 mt-2"
     >
       {smItem.map((items, SMindex) => {
         return (
           <div
             key={SMindex}
-            className="flex flex-row items-center gap-2 w-70 p-3 border-2 rounded-2xl"
+            className="flex flex-row items-center gap-2 w-70 h-20 border-2 rounded-2xl"
           >
-            <div>{items.tags}</div>
-            <ul className="flex flex-col gap-1">
+            <div className="flex justify-center items-center w-25 border-2 h-full rounded-l-2xl">
+              {items.tags}
+            </div>
+            <ul className="w-50 rounded-r-2xl">
               {items.link.map((itemLink, Linkindex) => {
                 return (
-                  <li key={Linkindex} className="list-disc ml-10 text-lg">
+                  <li
+                    key={Linkindex}
+                    className="flex flex-col justify-center ml-2 text-lg h-11"
+                  >
                     <a href={itemLink.url} target="_blink">
-                      {itemLink.userName}
+                      👉🏻 {itemLink.userName}
                     </a>
                   </li>
                 );

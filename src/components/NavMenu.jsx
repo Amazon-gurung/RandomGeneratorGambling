@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router";
 
 const NavItem = [
   {
-    name: "Home",
+    name: "Social Media",
     path: "/",
   },
   {

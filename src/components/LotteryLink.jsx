@@ -15,7 +15,7 @@ const LotteryItems1 = [
   {
     title: "DmWin",
     img: DmWin,
-    link: "https://www.dmwin0.com/#/register?invitationCode=25824427046",
+    link: "https://www.dmwin3.com/#/register?invitationCode=25824427046",
   },
   {
     title: "Goagames",
@@ -56,8 +56,9 @@ const LotteryLink = () => {
             rel="noopener noreferrer"
           >
             <div
-              className="flex flex-row items-center max-[639px]:w-100 max-[639px]:h-30 max-[410px]:w-90 max-[390px]:w-80
-            sm:w-100 sm:h-30 md:w-100 md:h-30 lg:w-100 lg:h-20 xl:w-110 xl:h-20 2xl:w-110 2xl:h-20 
+              className="flex flex-row items-center justify-center
+              max-[639px]:w-100 max-[639px]:h-30 max-[410px]:w-90 max-[390px]:w-80
+            sm:w-100 sm:h-30 md:w-70 md:h-30 lg:w-70 lg:h-30 xl:w-80 xl:h-30 2xl:w-80 2xl:h-30 
             bg-[#3674B5] text-[#D1F8EF] rounded-lg"
             >
               <img
@@ -65,9 +66,6 @@ const LotteryLink = () => {
                 alt="BDG game icon pic"
                 className="p-3 max-[390px]:w-40 w-50 h-full"
               />
-              <h2 className="text-3xl max-[390px]:text-2xl ml-5">
-                {item.title}
-              </h2>
             </div>
           </a>
         );
