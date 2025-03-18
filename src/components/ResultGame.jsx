@@ -29,8 +29,9 @@ const ResultGame = () => {
         Period: {data.period}
       </h2>
       <h1
-        className="flex flex-row justify-center items-center gap-5 text-8xl mt-10 bg-[#3674B5] text-[#D1F8EF]
-         max-[390px]:w-80 max-[390px]:h-40 max-[410px]:w-90 max-[410px]:h-40 max-[639px]:w-100 max-[639px]:h-50
+        className="flex flex-row justify-center items-center gap-5 text-6xl mt-10 bg-[#3674B5] text-[#D1F8EF]
+         max-[390px]:w-80 max-[390px]:h-40 max-[390px]:text-4xl max-[410px]:w-90 max-[410px]:h-40 max-[410px]:text-5xl 
+         max-[639px]:w-100 max-[639px]:h-50
          h-50 w-130 rounded-2xl"
       >
         {data.number} {data.result}

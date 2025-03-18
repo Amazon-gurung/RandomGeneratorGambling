@@ -1,3 +1,5 @@
+import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
 import {
   FaFacebookF,
   FaInstagram,
@@ -6,6 +8,7 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
+import SMLinkModal from "./SMLinkModal";
 
 const smItem = [
   {
@@ -106,6 +109,9 @@ const smItem = [
 ];
 
 const SMLink = () => {
+  const [selectModal, setSelectModal] = useState(false);
+  const [selectLink, setSelectLink] = useState([]);
+
   return (
     <div
       className="flex flex-col flex-wrap gap-5 justify-center items-center sm:w-full sm:h-80 
@@ -113,30 +119,31 @@ const SMLink = () => {
     >
       {smItem.map((items, SMindex) => {
         return (
-          <div
+          <button
             key={SMindex}
-            className="flex flex-row items-center gap-2 w-70 h-20 border-2 rounded-2xl"
+            className="flex flex-row items-center gap-2 w-70 h-20 border-2 rounded-2xl cursor-pointer"
+            onClick={() => {
+              setSelectLink(items.link);
+              setSelectModal(true);
+            }}
           >
-            <div className="flex justify-center items-center w-25 border-2 h-full rounded-l-2xl">
+            <div className="flex justify-center items-center w-25 h-full rounded-l-2xl">
               {items.tags}
             </div>
-            <ul className="w-50 rounded-r-2xl">
-              {items.link.map((itemLink, Linkindex) => {
-                return (
-                  <li
-                    key={Linkindex}
-                    className="flex flex-col justify-center ml-2 text-lg h-11"
-                  >
-                    <a href={itemLink.url} target="_blink">
-                      👉🏻 {itemLink.userName}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
+            <h1>{items.title}</h1>
+          </button>
         );
       })}
+      <AnimatePresence>
+        {selectModal && (
+          <SMLinkModal
+            selectLink={selectLink}
+            onClose={() => {
+              setSelectModal(false);
+            }}
+          />
+        )}
+      </AnimatePresence>
     </div>
   );
 };

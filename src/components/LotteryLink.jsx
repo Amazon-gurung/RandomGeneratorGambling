@@ -58,13 +58,14 @@ const LotteryLink = () => {
             <div
               className="flex flex-row items-center justify-center
               max-[639px]:w-100 max-[639px]:h-30 max-[410px]:w-90 max-[390px]:w-80
+              max-[320px]:w-70
             sm:w-100 sm:h-30 md:w-70 md:h-30 lg:w-70 lg:h-30 xl:w-80 xl:h-30 2xl:w-80 2xl:h-30 
             bg-[#3674B5] text-[#D1F8EF] rounded-lg"
             >
               <img
                 src={item.img}
                 alt="BDG game icon pic"
-                className="p-3 max-[390px]:w-40 w-50 h-full"
+                className="p-3 max-[390px]:w-40 w-50 h-23"
               />
             </div>
           </a>
