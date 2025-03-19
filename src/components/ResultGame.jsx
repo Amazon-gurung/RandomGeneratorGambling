@@ -30,9 +30,9 @@ const ResultGame = () => {
       </h2>
       <h1
         className="flex flex-row justify-center items-center gap-5 text-6xl mt-10 bg-[#3674B5] text-[#D1F8EF]
-         max-[390px]:w-60 max-[390px]:h-30 max-[390px]:text-4xl max-[410px]:w-70 max-[410px]:h-35 max-[410px]:text-5xl 
-         max-[639px]:w-80 max-[639px]:h-40
-         h-40 w-100"
+         max-[390px]:w-full max-[390px]:h-30 max-[390px]:text-4xl max-[410px]:w-full max-[410px]:h-35 max-[410px]:text-5xl 
+         max-[639px]:w-full max-[639px]:h-40
+         h-40 w-100 min-[640px]:rounded-2xl"
       >
         {data.number} {data.result}
         <div

@@ -27,7 +27,7 @@ const NavMenu = () => {
           <Link
             to={item.path}
             key={index}
-            className={`flex justify-center items-center  text-2xl w-60 h-17 duration-500 ${
+            className={`flex justify-center items-center text-2xl w-60 h-17 duration-500 ${
               location.pathname === item.path
                 ? "bg-[#578FCA] text-[#D1F8EF] rounded-2xl"
                 : "hover:bg-[#578FCA] hover:text-[#D1F8EF] rounded-2xl"
