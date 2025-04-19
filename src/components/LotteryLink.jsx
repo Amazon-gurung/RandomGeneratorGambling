@@ -2,9 +2,9 @@ import BDGImg from "../assets/LotteryImg/BDG_game.png";
 import DmWin from "../assets/LotteryImg/DmWin.png";
 import GoaGame from "../assets/LotteryImg/GoaGame.png";
 import OkWin from "../assets/LotteryImg/OkWin.png";
-import TiRanga from "../assets/LotteryImg/TiRanga.png";
+// import TiRanga from "../assets/LotteryImg/TiRanga.png";
 import Sikkim from "../assets/LotteryImg/Sikkim.png";
-import BHTClub from "../assets/LotteryImg/BharatClub.png";
+// import BHTClub from "../assets/LotteryImg/BharatClub.png";
 
 const LotteryItems1 = [
   {
@@ -27,21 +27,21 @@ const LotteryItems1 = [
     img: OkWin,
     link: "https://okwinslots3.com/#/register?invitationCode=751723501742",
   },
-  {
+  /* {
     title: "Tiranga",
     img: TiRanga,
     link: "https://tgdream15.com/#/register?invitationCode=57326486185",
-  },
+  }, */
   {
     title: "Sikkim",
     img: Sikkim,
     link: "http://www.6sikkim.com/#/register?invitationCode=61663329934",
   },
-  {
+  /* {
     title: "BharatClub",
     img: BHTClub,
     link: "https://bharatclub.bet/#/register?invitationCode=174452758909",
-  },
+  }, */
 ];
 
 const LotteryLink = () => {
