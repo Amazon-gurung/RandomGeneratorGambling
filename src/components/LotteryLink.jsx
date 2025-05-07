@@ -1,47 +1,53 @@
-import BDGImg from "../assets/LotteryImg/BDG_game.png";
-import DmWin from "../assets/LotteryImg/DmWin.png";
-import GoaGame from "../assets/LotteryImg/GoaGame.png";
-import OkWin from "../assets/LotteryImg/OkWin.png";
-// import TiRanga from "../assets/LotteryImg/TiRanga.png";
-import Sikkim from "../assets/LotteryImg/Sikkim.png";
-// import BHTClub from "../assets/LotteryImg/BharatClub.png";
+import BDGImg from '../assets/LotteryImg/BDG_game.png';
+import DmWin from '../assets/LotteryImg/DmWin.png';
+import GoaGame from '../assets/LotteryImg/GoaGame.png';
+import OkWin from '../assets/LotteryImg/OkWin.png';
+import Tashanwin from '../assets/LotteryImg/Tashanwin.png';
+import Sikkim from '../assets/LotteryImg/Sikkim.png';
+import JalwaGame from '../assets/LotteryImg/JalwaGame.png';
+import BHTClub from '../assets/LotteryImg/BharatClub.png';
 
 const LotteryItems1 = [
   {
-    title: "BDG",
+    title: 'BDG',
     img: BDGImg,
-    link: "https://www.bdgall07.com//#/register?invitationCode=326366075061",
+    link: 'https://www.bdgall07.com//#/register?invitationCode=326366075061',
   },
   {
-    title: "DmWin",
+    title: 'DmWin',
     img: DmWin,
-    link: "https://www.dmwin3.com/#/register?invitationCode=25824427046",
+    link: 'https://www.dmwin3.com/#/register?invitationCode=25824427046',
   },
   {
-    title: "Goagames",
+    title: 'Goagames',
     img: GoaGame,
-    link: "http://www.goabetg.com/#/register?invitationCode=655752637246",
+    link: 'http://www.goabetg.com/#/register?invitationCode=655752637246',
   },
   {
-    title: "OK.Win",
+    title: 'OK.Win',
     img: OkWin,
-    link: "https://okwinslots3.com/#/register?invitationCode=751723501742",
+    link: 'https://okwinslots3.com/#/register?invitationCode=751723501742',
   },
-  /* {
-    title: "Tiranga",
-    img: TiRanga,
-    link: "https://tgdream15.com/#/register?invitationCode=57326486185",
-  }, */
   {
-    title: "Sikkim",
-    img: Sikkim,
-    link: "http://www.6sikkim.com/#/register?invitationCode=61663329934",
+    title: 'Tashan win',
+    img: Tashanwin,
+    link: 'http://www.tashanwin.cc/#/register?invitationCode=82661130365',
   },
-  /* {
-    title: "BharatClub",
+  {
+    title: 'Sikkim',
+    img: Sikkim,
+    link: 'http://www.6sikkim.com/#/register?invitationCode=61663329934',
+  },
+  {
+    title: 'Jalwa.Game',
+    img: JalwaGame,
+    link: 'https://www.jalwawin8.com/#/register?invitationCode=652812169586',
+  },
+  {
+    title: 'Bharat Club',
     img: BHTClub,
-    link: "https://bharatclub.bet/#/register?invitationCode=174452758909",
-  }, */
+    link: 'https://bharatclub.bet/#/register?invitationCode=174452758909',
+  },
 ];
 
 const LotteryLink = () => {
