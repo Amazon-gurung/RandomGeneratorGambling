@@ -1,24 +1,24 @@
-import { Routes, Route, useLocation } from "react-router";
-import SMIcon from "./components/SMIcon";
-import NavMenu from "./components/NavMenu";
-import LotteryLink from "./components/LotteryLink";
-import ResultGame from "./components/ResultGame";
-import { useEffect, useRef, useState } from "react";
+// import { Routes, Route, useLocation } from "react-router";
+import SMIcon from './components/SMIcon';
+// import NavMenu from "./components/NavMenu";
+// import LotteryLink from "./components/LotteryLink";
+// import ResultGame from "./components/ResultGame";
+// import { useEffect, useRef, useState } from "react";
 
 function App() {
-  const dialogRef = useRef();
-  const [showDialog, setShowDialog] = useState(true);
-  const location = useLocation();
+  // const dialogRef = useRef();
+  // const [showDialog, setShowDialog] = useState(true);
+  // const location = useLocation();
 
-  useEffect(() => {
-    if (showDialog && dialogRef.current) {
-      dialogRef.current.showModal();
-    }
-  }, [showDialog]);
+  // useEffect(() => {
+  //   if (showDialog && dialogRef.current) {
+  //     dialogRef.current.showModal();
+  //   }
+  // }, [showDialog]);
 
   return (
     <>
-      {showDialog && (
+      {/* {showDialog && (
         <div className="flex justify-center items-center w-screen h-screen">
           <dialog
             ref={dialogRef}
@@ -41,19 +41,19 @@ function App() {
           </dialog>
         </div>
       )}
-      {!showDialog && (
-        <section className="flex flex-col justify-center items-center">
-          <h1 className="flex justify-center items-center text-7xl w-full h-25 font-[yellowtail]">
-            3ayank
-          </h1>
-          <NavMenu />
+      {!showDialog && ( */}
+      <section className="flex flex-col justify-center items-center">
+        <h1 className="flex justify-center items-center text-7xl w-full h-25 font-[yellowtail]">
+          3ayank
+        </h1>
+        {/* <NavMenu />
           <Routes location={location} key={location.pathname}>
             <Route index element={<SMIcon />} />
             <Route path="/lottery" element={<LotteryLink />} />
             <Route path="/result" element={<ResultGame />} />
-          </Routes>
-        </section>
-      )}
+          </Routes> */}
+        <SMIcon />
+      </section>
     </>
   );
 }
